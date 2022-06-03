@@ -229,7 +229,7 @@ namespace Querying_Module
             this.StatusBar.EllipticalGlow = false;
 
             xtl.ThemeForm = this;
-            xtl.ApplyTheme(Path.Combine(Environment.CurrentDirectory, @"..\..\Themes\StandardWindowsTheme.xml"));
+            xtl.ApplyTheme(Path.Combine(Environment.CurrentDirectory, @"..\..\StandardWindowsTheme.xml"));
             this.TitleBar.TitleBarCaption = "Querying Module";
             this.TitleBar.TitleBarFill = XCoolForm.XTitleBar.XTitleBarFill.AdvancedRendering;
             this.TitleBar.TitleBarType = XCoolForm.XTitleBar.XTitleBarType.Rounded;
@@ -244,7 +244,7 @@ namespace Querying_Module
                 flag = false;
 
                 Choices sList = new Choices();
-                sList.Add(new string[] { "tektek", "tak", "tek", "taktak", "execute", "select", "all", "select all", "distinct", "from", "where", "back", "redo", "order by", "Patients", "Employees", "Products", "id", "name", "close", "all", "price", "sum", "min", "avg", "max", "count", "comma", "clean", "age", "gender", "bloodgroup", "department", "country", "salary", "greater than", "less than", "equals", "in", "not", "like", "and", "or", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" });
+                sList.Add(new string[] { "execute", "select", "all", "select all", "distinct", "from", "where", "back", "redo", "order by", "Patients", "Employees", "Products", "id", "name", "close", "all", "price", "sum", "min", "avg", "max", "count", "comma", "clean", "age", "gender", "bloodgroup", "department", "country", "salary", "greater than", "less than", "equals", "in", "not", "like", "and", "or", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9" });
                 Grammar gr = new Grammar(new GrammarBuilder(sList));
                 try
                 {
@@ -271,7 +271,7 @@ namespace Querying_Module
         }
         private void sRecognize_SpeechRecognized(object sender, SpeechRecognizedEventArgs e)
         {
-            if (e.Result.Text == "close" || e.Result.Text == "taktak" || e.Result.Text == "tektek" || e.Result.Text == "tak" || e.Result.Text == "tek")
+            if (e.Result.Text == "close")
             {
                 Application.Exit();
             }
